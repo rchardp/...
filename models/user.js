@@ -40,7 +40,7 @@ class User {
   static async create({ name, email, password }) {
     let response;
     try {
-      response = await db.insert('users', { name });
+      response = await db.insert('users', { name, email, password });
     } catch (err) {
       throw err;
     }
