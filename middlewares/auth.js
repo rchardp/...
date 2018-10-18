@@ -2,10 +2,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { User, ResponseMaker } = require('../models');
 
-const config = {
-  'secret': 'supersecret'
-};
-
 class Auth {
   constructor() {
     this.register = this.register.bind(this);
